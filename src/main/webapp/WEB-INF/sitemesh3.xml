@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+
+	<mapping path="/member/*" decorator="/layout/layout.jsp" />
+	<mapping path="/board/*" decorator="/layout/layout.jsp" />
+	<mapping path="/user/*" decorator="/layout/layout2.jsp" />
+	
+	<mapping path="*/pictureimgForm" exclude="true" />
+	<mapping path="*/picturePro" exclude="true" />
+	<mapping path="*/userPictureimgForm" exclude="true" />
+	<mapping path="*/userPicturePro" exclude="true" />
+</sitemesh>

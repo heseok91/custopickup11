@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store">
+	<insert id="insertStore" parameterType="store">
+		insert into store 
+		values
+		(#{storeid}, #{storename}, #{storetel}, #{storetype}, #{storedayoff}, #{storeopen}, #{storeclose}, #{storepicture}, #{storeaddress})
+	</insert>
+	
+	<select id="selectOne" resultType="store">
+		select * from store where storeid = #{value}
+	</select>
+	
+	<update id="updateStore" parameterType="store">
+		update store set 
+		storename=#{storename}, storetel=#{storetel}, storetype=#{storetype}, storedayoff=#{storedayoff}, storeopen=#{storeopen}, storeclose=#{storeclose}, storepicture=#{storepicture}, storeaddress=#{storeaddress}
+		where storeid = #{storeid}
+	</update>
+	
+	<delete id="deleteStore" parameterType="string">
+		delete from store where storeid = #{storeid}
+	</delete>
+
+</mapper>
