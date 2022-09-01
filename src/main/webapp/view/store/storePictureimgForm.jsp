@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가게 사진 등록</title>
+</head>
+<body>
+<h3>업로드</h3>
+<form class="w3-container"   method="post" action="${pageContext.request.contextPath}/store/storePicturePro"
+enctype="multipart/form-data">
+	<!-- 업로드하려면 반드시 multipart/form-data가 있어야한다 -->
+  <input class="w3-input"  type="file" name="storepicture">
+  <input class="w3-input"  type="submit" value="사진등록">
+ </form>
+</body>
+</html>
